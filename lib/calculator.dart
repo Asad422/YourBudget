@@ -313,7 +313,12 @@ class _CalculatorState extends State<Calculator> {
     final D = start * C;
 
     setState(() {
-      sum = D;
+      if(D < 9999999999999)  sum = D;
+
+      else sum = 9999999999999;
+             
+
+
       income = sum - start;
     });
   }
